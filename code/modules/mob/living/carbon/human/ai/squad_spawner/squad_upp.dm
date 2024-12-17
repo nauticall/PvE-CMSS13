@@ -23,14 +23,6 @@
 		/datum/equipment_preset/upp/sanitar = 3,
 	)
 
-/datum/human_ai_squad_preset/upp/sniper
-	name = "Sniper Team"
-	desc = "A UPP marksman and 2 riflemen to accompany them."
-	ai_to_spawn = list(
-		/datum/equipment_preset/upp/rifleman = 2,
-		/datum/equipment_preset/upp/sniper = 1,
-	)
-
 /datum/human_ai_squad_preset/upp/squad
 	name = "Standard Squad"
 	desc = "A standard squad of 10 UPP soldiers."
