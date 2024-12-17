@@ -54,7 +54,7 @@
 
 /datum/human_ai_squad_preset/army/medical
 	name = "Medical Team"
-	desc = "A team comprising medic escorted by a rifleman."
+	desc = "A team comprising a medic, escorted by a rifleman."
 	ai_to_spawn = list(
 		/datum/equipment_preset/usa/medic = 1,
 		/datum/equipment_preset/usa/trooper = 1,
