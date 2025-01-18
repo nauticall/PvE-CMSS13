@@ -185,7 +185,7 @@
 	soundscape_playlist = SCAPE_PL_LV759_DERELICTSHIP
 	ceiling_muffle = FALSE
 	minimap_color = MINIMAP_AREA_HYBRISACAVES
-	unoviable_timer = FALSE
+
 
 // Caves
 
@@ -197,7 +197,7 @@
 	soundscape_playlist = SCAPE_PL_LV759_DEEPCAVES
 	ceiling_muffle = FALSE
 	minimap_color = MINIMAP_AREA_HYBRISACAVES
-	unoviable_timer = FALSE
+	
 
 /area/lv759/indoors/caves/west_caves
 	name = "Caverns - West"
@@ -207,7 +207,7 @@
 	soundscape_playlist = SCAPE_PL_LV759_CAVES
 	ceiling_muffle = FALSE
 	minimap_color = MINIMAP_AREA_HYBRISACAVES
-	unoviable_timer = FALSE
+
 
 /area/lv759/indoors/caves/west_caves_alarm
 	name = "Caverns - West"
@@ -230,7 +230,7 @@
 /area/lv759/indoors/caves/east_caves/north
 	name = "Caverns - East"
 	icon_state = "caves_east"
-	unoviable_timer = FALSE
+
 
 /area/lv759/indoors/caves/south_caves
 	name = "Caverns - South"
@@ -244,7 +244,7 @@
 /area/lv759/indoors/caves/south_caves/derelict_ship
 	name = "Caverns - South"
 	icon_state = "caves_south"
-	unoviable_timer = FALSE
+
 
 /area/lv759/indoors/caves/south_east_caves
 	name = "Caverns - Southeast"
@@ -281,7 +281,7 @@
 	soundscape_playlist = SCAPE_PL_LV759_DEEPCAVES
 	ceiling_muffle = FALSE
 	minimap_color = MINIMAP_AREA_HYBRISACAVES
-	unoviable_timer = FALSE
+
 
 /area/lv759/outdoors/caves/north_west_caves_outdoors
 	name = "Caverns - Northwest"
@@ -291,7 +291,7 @@
 	soundscape_playlist = SCAPE_PL_LV759_CAVES
 	ceiling_muffle = FALSE
 	minimap_color = MINIMAP_AREA_HYBRISACAVES
-	unoviable_timer = FALSE
+
 
 /area/lv759/indoors/caves/north_east_caves
 	name = "Caverns - Northeast"
@@ -326,7 +326,7 @@
 	soundscape_playlist = SCAPE_PL_LV759_CAVES
 	ceiling_muffle = FALSE
 	minimap_color = MINIMAP_AREA_HYBRISACAVES
-	unoviable_timer = FALSE
+
 
 /area/lv759/indoors/caves/central_caves_north
 	name = "Caverns - Central"
@@ -359,7 +359,7 @@
 	ambience_exterior = AMBIENCE_HYBRISA_CAVES
 	soundscape_playlist = SCAPE_PL_LV759_PLATEAU_OUTDOORS
 	minimap_color = MINIMAP_AREA_HYBRISACAVES
-	unoviable_timer = FALSE
+
 
 // Colony Streets
 
@@ -428,7 +428,7 @@
 
 /area/lv759/indoors/spaceport
 	minimap_color = MINIMAP_AREA_COLONY_SPACE_PORT
-	unoviable_timer = FALSE
+
 
 /area/lv759/indoors/spaceport/hallway_northeast
 	name = "Weyland-Yutani Celestia Gateway Space-Port - Hallway - Northeast"
@@ -1171,7 +1171,7 @@
 	icon_state = "wylab"
 	minimap_color = MINIMAP_AREA_HYBRISARESEARCH
 	ceiling = CEILING_UNDERGROUND_METAL_BLOCK_CAS
-	unoviable_timer = FALSE
+
 	ceiling_muffle = FALSE
 
 /area/lv759/indoors/wy_research_complex/medical_annex

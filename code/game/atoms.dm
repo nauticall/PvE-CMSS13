@@ -11,6 +11,14 @@
 	var/fingerprintslast = null
 
 	var/unacidable = FALSE
+
+	/// determines whether or not the object can be destroyed by xeno acid
+	var/unacidable = FALSE
+	/// determines whether or not the object can be destroyed by an explosion
+	var/explo_proof = FALSE
+	/// determines whether or not the object can be affected by EMPs
+	var/emp_proof = FALSE
+
 	var/last_bumped = 0
 
 	// The cached datum for the permanent pass flags for any given atom

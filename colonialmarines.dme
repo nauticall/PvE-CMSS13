@@ -427,6 +427,7 @@
 #include "code\datums\components\overlay_lighting.dm"
 #include "code\datums\components\phone.dm"
 #include "code\datums\components\rename.dm"
+#include "code\datums\components\shimmy_around.dm"
 #include "code\datums\components\speed_modifier.dm"
 #include "code\datums\components\status_effect_component.dm"
 #include "code\datums\components\temporary_mute.dm"
@@ -1377,7 +1378,6 @@
 #include "code\game\objects\structures\crates_lockers\closets\gimmick.dm"
 #include "code\game\objects\structures\crates_lockers\closets\job_closets.dm"
 #include "code\game\objects\structures\crates_lockers\closets\l3closet.dm"
-#include "code\game\objects\structures\crates_lockers\closets\malfunction.dm"
 #include "code\game\objects\structures\crates_lockers\closets\phonebox.dm"
 #include "code\game\objects\structures\crates_lockers\closets\utility_closets.dm"
 #include "code\game\objects\structures\crates_lockers\closets\wall_locker.dm"
@@ -1845,10 +1845,6 @@
 #include "code\modules\gear_presets\yautja.dm"
 #include "code\modules\gear_presets\survivors\misc.dm"
 #include "code\modules\gear_presets\survivors\survivors.dm"
-#include "code\modules\gear_presets\survivors\corsat\preset_corsat.dm"
-#include "code\modules\gear_presets\survivors\fiorina_sciannex\preset_fiorina_sciannex.dm"
-#include "code\modules\gear_presets\survivors\fiorina_sciannex\riot_in_progress_insert_fiorina_nightmare.dm"
-#include "code\modules\gear_presets\survivors\kutjevo\preset_kutjevo.dm"
 #include "code\modules\gear_presets\survivors\lv759\preset_hybrisa.dm"
 #include "code\modules\gear_presets\survivors\lv_522\forcon_survivors.dm"
 #include "code\modules\holidays\halloween\decorators.dm"
@@ -2548,4 +2544,5 @@
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\_basemap.dm"
+
 // END_INCLUDE

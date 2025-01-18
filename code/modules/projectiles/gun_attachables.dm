@@ -2351,7 +2351,7 @@ Defined in conflicts.dm of the #defines folder.
 	melee_mod = 0 //Integrated attachment for visuals, stats handled on main gun.
 	size_mod = 0
 
-/* /obj/item/attachable/m4ra_barrel/New()
+/obj/item/attachable/m4ra_barrel/New()
 	..()
 	select_gamemode_skin(type)
 

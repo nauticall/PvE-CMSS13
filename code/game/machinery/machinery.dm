@@ -91,8 +91,6 @@ Class Procs:
 //  IDLE -- machine is using power at its idle power level
 //  ACTIVE -- machine is using power at its active power level
 
-GLOBAL_LIST_EMPTY(machines)
-
 /obj/structure/machinery
 	name = "machinery"
 	icon = 'icons/obj/structures/props/stationobjs.dmi'
@@ -112,8 +110,6 @@ GLOBAL_LIST_EMPTY(machines)
 	/// Reverse lookup for a breaker_switch that if specified is controlling us
 	var/obj/structure/machinery/colony_floodlight_switch/breaker_switch
 	var/power_machine = FALSE //Whether the machine should process on power, or normal processor
-	/// Reverse lookup for a breaker_switch that if specified is controlling us
-	var/obj/structure/machinery/colony_floodlight_switch/breaker_switch
 	/// Whether this is toggled on
 	var/is_on = TRUE
 

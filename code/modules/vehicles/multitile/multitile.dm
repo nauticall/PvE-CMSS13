@@ -9,7 +9,7 @@
 	name = "multitile vehicle"
 	desc = "Get inside to operate the vehicle."
 
-	health = 3000
+	health = 1000
 
 	//How big the vehicle is in pixels, defined facing SOUTH, which is the byond default (i.e. a 3x3 vehicle is going to be 96x96) ~Cakey
 	bound_width = 32
@@ -21,13 +21,11 @@
 
 	can_buckle = FALSE
 
-	//Vehicle self-illumination
 	light_system = MOVABLE_LIGHT
 	light_range = 5
-	light_power = 2
 
-	//Vehicle headlights
-	var/atom/movable/vehicle_light/light_holder
+	var/atom/movable/vehicle_light_holder/lighting_holder
+
 	var/vehicle_light_range = 5
 	var/vehicle_light_power = 2
 
@@ -178,13 +176,15 @@
 	rotate_bounds(angle_to_turn)
 
 	if(bound_width > world.icon_size || bound_height > world.icon_size)
-		light_holder = new(src)
-		light_holder.set_light_flags(LIGHT_ATTACHED)
-		light_holder.set_light_range(vehicle_light_range)
-		light_holder.set_light_power(vehicle_light_power)
-		light_holder.set_light_on(vehicle_light_range && vehicle_light_power)
+		lighting_holder = new(src)
+		lighting_holder.set_light_range(vehicle_light_range)
+		lighting_holder.set_light_power(vehicle_light_power)
+		lighting_holder.set_light_on(vehicle_light_range || vehicle_light_power)
+	else if(light_range)
+		set_light_on(TRUE)
 
-	set_light_on(light_range && light_power)
+	light_pixel_x = -bound_x
+	light_pixel_y = -bound_y
 
 	healthcheck()
 	update_icon()
@@ -209,8 +209,6 @@
 		return
 
 /obj/vehicle/multitile/Destroy()
-	QDEL_NULL(light_holder)
-
 	if(!QDELETED(interior))
 		QDEL_NULL(interior)
 
@@ -384,9 +382,11 @@
 		handle_all_modules_broken()
 
 	//vehicle is dead, no more lights
-	if(health <= 0 && light_holder.light_range)
-		set_light_on(FALSE)
-		light_holder.set_light_on(FALSE)
+	if(health <= 0 && lighting_holder.light_range)
+		lighting_holder.set_light_on(FALSE)
+	else
+		if(!lighting_holder.light)
+			lighting_holder.set_light_on(TRUE)
 	update_icon()
 
 /*
@@ -443,5 +443,19 @@
 	for(var/obj/item/hardpoint/locomotion/Loco in hardpoints)
 		Loco.handle_acid_damage(A)
 
-/atom/movable/vehicle_light
-	light_system = DIRECTIONAL_LIGHT
+/atom/movable/vehicle_light_holder
+	light_system = MOVABLE_LIGHT
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+
+/atom/movable/vehicle_light_holder/Initialize(mapload, ...)
+	. = ..()
+
+	var/atom/attached_to = loc
+
+	forceMove(attached_to.loc)
+	RegisterSignal(attached_to, COMSIG_MOVABLE_MOVED, PROC_REF(handle_parent_move))
+
+/atom/movable/vehicle_light_holder/proc/handle_parent_move(atom/movable/mover, atom/oldloc, direction)
+	SIGNAL_HANDLER
+
+	forceMove(get_turf(mover))
