@@ -70,10 +70,10 @@
 	UnregisterSignal(user, COMSIG_HUMAN_ATTEMPTING_EQUIP)
 
 /obj/item/clothing/suit/storage/marine/smartgunner/standard
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/smartgunner/black
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 	icon_state = "8fancy"
 
 /obj/item/clothing/suit/storage/marine/smartgunner/upp
@@ -82,7 +82,7 @@
 	icon_state = "upp_armor_support"
 	storage_slots = 1
 	slowdown = SLOWDOWN_ARMOR_LOWHEAVY
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS
 	armor_melee = CLOTHING_ARMOR_HIGH
@@ -192,8 +192,8 @@
 	UnregisterSignal(user, COMSIG_HUMAN_ATTEMPTING_EQUIP)
 
 /obj/item/clothing/suit/marine/smartgunner/standard
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/marine/smartgunner/black
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 	icon_state = "8fancy"

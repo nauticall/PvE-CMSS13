@@ -1121,7 +1121,7 @@
 	desc = "An attachable neck guard option for the M3 armor set worn by the UACG."
 	icon_state = "neckguard_uacg"
 	item_state = "neckguard_uacg"
-	flags_atom = NO_SNOW_TYPE
+
 
 /obj/item/clothing/accessory/pads/greaves
 	name = "\improper M3 Shin Guards"
@@ -1150,7 +1150,7 @@
 	icon_state = "groinplate_uacg"
 	item_state = "groinplate_uacg"
 	slot = ACCESSORY_SLOT_DECORGROIN
-	flags_atom = NO_SNOW_TYPE
+
 
 //===========================//CUSTOM ARMOR PAINT\\================================\\
 
@@ -1194,7 +1194,7 @@
 	icon_state = "m3webbing"
 	hold = /obj/item/storage/internal/accessory/webbing/m3generic
 	slot = ACCESSORY_SLOT_M3UTILITY
-	flags_atom = NO_SNOW_TYPE
+
 
 /obj/item/clothing/accessory/storage/webbing/m3/Initialize(mapload)
 	. = ..()

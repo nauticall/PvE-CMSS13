@@ -390,6 +390,8 @@
 
 // Hybrisa
 
+
+
 /obj/item/reagent_container/food/drinks/coffee/cuppa_joes
 	name = "\improper Cuppa Joe's coffee"
 	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."

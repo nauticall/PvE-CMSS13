@@ -356,7 +356,7 @@ GLOBAL_DATUM_INIT(supply_controller, /datum/controller/supply, new())
 
 /obj/structure/machinery/computer/supply_drop_console/limited/alternate
 	icon = 'icons/obj/structures/machinery/computer.dmi'
-	icon_state = "sensor_comp2"
+	icon_state = "comm"
 
 /*
 /obj/effect/marker/supplymarker

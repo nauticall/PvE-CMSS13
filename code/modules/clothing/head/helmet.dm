@@ -779,22 +779,22 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "A standard M10 Pattern Helmet. This one has not had a camouflage pattern applied to it yet. There is a built-in camera on the right side."
 	icon_state = "c_helmet"
 	item_state = "c_helmet"
-	flags_atom = NO_SNOW_TYPE
+
 
 /obj/item/clothing/head/helmet/marine/jungle
 	icon_state = "helmet"
 	item_state = "helmet"
-	flags_atom = NO_SNOW_TYPE
+
 
 /obj/item/clothing/head/helmet/marine/snow
 	icon_state = "s_helmet"
 	item_state = "s_helmet"
-	flags_atom = NO_SNOW_TYPE
+
 
 /obj/item/clothing/head/helmet/marine/desert
 	icon_state = "d_helmet"
 	item_state = "d_helmet"
-	flags_atom = NO_SNOW_TYPE
+
 
 /obj/item/clothing/head/helmet/marine/tech/tanker
 	name = "\improper Mk20 tanker helmet"
@@ -822,7 +822,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "An M10 marine helmet version worn by marine hospital corpsmen. Painted in medical white and has white cross in a red square painted on its front."
 	icon_state = "med_helmet_white"
 	specialty = "M10 pattern medic white"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+|NO_NAME_OVERRIDE
 	flags_marine_helmet = HELMET_GARB_OVERLAY|HELMET_DAMAGE_OVERLAY
 
 /obj/item/clothing/head/helmet/marine/covert
@@ -837,7 +837,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_rad = CLOTHING_ARMOR_LOW
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
 	specialty = "M10 pattern covert"
-	flags_atom = NO_SNOW_TYPE
+
 
 /obj/item/clothing/head/helmet/marine/leader
 	name = "\improper M09 pattern helmet"
@@ -969,7 +969,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "M10 pattern captain"
-	flags_atom = NO_SNOW_TYPE
+
 	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical/advanced, new /obj/item/device/helmet_visor/security)
 
 /obj/item/clothing/head/helmet/marine/MP
@@ -979,7 +979,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	item_state = "mp_helmet"
 	specialty = "M10 pattern military police"
 	built_in_visors = list(new /obj/item/device/helmet_visor)
-	flags_atom = NO_SNOW_TYPE
+
 
 /obj/item/clothing/head/helmet/marine/MP/WO
 	name = "\improper M3 pattern chief MP helmet"
@@ -1001,7 +1001,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "The expensive headwear of a Provost Marshal. Venlar lined, boron carbide tiled, tailored to wear semi-comfortably."
 	icon_state = "pvmarshalhat"
 	item_state = "pvmarshalhat"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+|NO_NAME_OVERRIDE
 	flags_inventory = BLOCKSHARPOBJ|FULL_DECAP_PROTECTION
 
 /obj/item/clothing/head/helmet/marine/sof
@@ -1013,7 +1013,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	specialty = "M10 pattern SOF"
-	flags_atom = NO_SNOW_TYPE
+
 	built_in_visors = list(new /obj/item/device/helmet_visor/night_vision/marine_raider, new /obj/item/device/helmet_visor/security)
 	start_down_visor_type = /obj/item/device/helmet_visor/night_vision/marine_raider
 
@@ -1021,7 +1021,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 //=======================================================================\\
 
 /obj/item/clothing/head/helmet/marine/veteran
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE //Let's make these keep their name and icon.
+|NO_NAME_OVERRIDE //Let's make these keep their name and icon.
 	built_in_visors = list()
 
 /obj/item/clothing/head/helmet/marine/veteran/pmc
@@ -1104,7 +1104,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper M10 pattern ballistic helmet"
 	desc = "Standard issue high molecular density polymer combat helmet. Resistant to glancing hits from small arms and shrapnel. This version is stripped down, missing the typically incorporated tactical camera, IFF signal transponder, and heads up display eyepiece."
 	icon_state = "ua_riot"
-	flags_atom = NO_SNOW_TYPE
+
 
 // KUTJEVO HELMET
 
@@ -1823,7 +1823,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	desc = "A helmet designed to make it clear that the wearer is safety aware and not looking for a fight."
 	icon_state = "cc_helmet"
 	item_state = "cc_helmet"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+|NO_NAME_OVERRIDE
 
 	built_in_visors = list()
 
@@ -1845,7 +1845,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	throwforce = 0
 	flags_inventory = BLOCKSHARPOBJ
 	flags_marine_helmet = NO_FLAGS
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+|NO_NAME_OVERRIDE
 	flags_inv_hide = HIDEEARS|HIDEALLHAIR
 	built_in_visors = list()
 
@@ -1894,21 +1894,21 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 /obj/item/clothing/head/helmet/marine/tech/tanker/para
 	name = "\improper MK25 para-rescue helmet"
 	desc = "A heavily modified USCM tanker helmet used by members of the USASF para-rescue units for it's compact design and adequate protection. Camera on the side and biometric transmitter ties into the sensor matrix."
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+|NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/rto/navy
 	name = "\improper M12 pattern naval-deployment helmet"
 	desc = "Whilst the USCMC ultimately didn't adopt it, the USASF were more than happy to replace their aging stock of M09 helmets for personnel whose duties saw them deploy off-ship. New ceramic composites and suspension system show a remarkable increase in blunt impact resistance, while a revamped wiring structure added space for a second optic socket."
 	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+|NO_NAME_OVERRIDE
 
 /obj/item/clothing/head/helmet/marine/rto/army
 	name = "\improper M12 pattern helmet"
 	desc = "Despite it failing to be procured by the USCMC, the Army happily introduced the new M12 series of helmets to vast swathes of it's forces in a short span of time. New ceramic composites and suspension system show a remarkable increase in blunt impact resistance, while a revamped wiring structure added space for a second optic socket."
 	built_in_visors = list(new /obj/item/device/helmet_visor, new /obj/item/device/helmet_visor/medical)
 	start_down_visor_type = /obj/item/device/helmet_visor/medical
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+|NO_NAME_OVERRIDE
 	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
 	flags_inventory = BLOCKSHARPOBJ
 	clothing_traits = list(TRAIT_EAR_PROTECTION) //So I don't have to make another subtype for the rocketeers

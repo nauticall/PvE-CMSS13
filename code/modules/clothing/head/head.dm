@@ -764,7 +764,7 @@
 	desc = "An improvised head wrap made out of a standard issue neckerchief. Great for keeping the sweat out of your eyes and protecting your hair."
 	icon_state = "durag"
 	icon = 'icons/obj/items/clothing/cm_hats.dmi'
-	flags_atom = NO_SNOW_TYPE
+
 	flags_inv_hide = HIDETOPHAIR
 	item_icons = list(
 		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'

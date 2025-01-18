@@ -321,7 +321,7 @@
 	item_state = "co_officer"
 	armor_bullet = CLOTHING_ARMOR_HIGH
 	storage_slots = 3
-	flags_atom = NO_SNOW_TYPE
+
 	flags_inventory = BLOCKSHARPOBJ|SMARTGUN_HARNESS
 	specialty = "M3 pattern captain"
 	item_state_slots = list(WEAR_JACKET = "co_officer")
@@ -402,13 +402,13 @@
 	armor_variation = 0
 
 /obj/item/clothing/suit/storage/marine/light/standard
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/light/vest
 	name = "\improper M3-VL pattern ballistics vest"
 	desc = "Up until 2182 USCM non-combat personnel were issued non-standardized ballistics vests, though the lack of IMP compatibility and suit lamps proved time and time again inefficient. This modified M3-L shell is the result of a 6-year R&D program; It provides utility, protection, AND comfort to all USCM non-combat personnel."
 	icon_state = "VL"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 	flags_marine_armor = ARMOR_LAMP_OVERLAY //No squad colors when wearing this since it'd look funny.
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_HIGH
@@ -451,23 +451,23 @@
 
 /obj/item/clothing/suit/storage/marine/light/synvest/grey
 	icon_state = "VL_syn"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/light/synvest/jungle
 	icon_state = "VL_syn_camo"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/light/synvest/snow
 	icon_state = "s_VL_syn_camo"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/light/synvest/desert
 	icon_state = "d_VL_syn_camo"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/light/synvest/dgrey
 	icon_state = "c_VL_syn_camo"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/light/recon
 	name = "M3-R pattern light armor"
@@ -604,7 +604,7 @@
 	name = "press body armor"
 	desc = "Body armor used by war correspondents in battles and wars across the universe."
 	icon_state = "cc_armor"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 
 //==================PLU Lamp Rig==================\\
 
@@ -633,12 +633,12 @@
 	name = "\improper M4 pattern naval-deployment armor"
 	desc = "A set of USASF acquired M4 armor, modified to fit the needs of the members that see deployment on the surface of worlds. Robust, yet very nimble, with room for all your pouches."
 	movement_compensation = SLOWDOWN_ARMOR_LIGHT	//carbon fibre and shit in the plates rather than heavy stuff, so the swabbies stay nimble
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/storage/marine/medium/rto/army
 	name = "\improper M4 pattern trooper armor"
 	desc = "Whilst it saw limited field-testing amongst the USCMC, the US Army adopted the M4 series pattern armor across the board. Surprisingly uncomfortable, even compared to the old M3 series armor."
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 
 //===========================//CUSTOM ARMOR\\================================\\
 //=======================================================================\\
@@ -875,7 +875,7 @@
 	armor_variation = 0
 
 /obj/item/clothing/suit/marine/light/standard
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 
 
 /obj/item/clothing/suit/marine/heavy
@@ -921,7 +921,7 @@
 	name = "\improper M3-R pattern recon armor"
 	desc = "A modified Colonial Marines M3 Pattern Chestplate. Protects the chest from ballistic rounds, bladed objects and accidents. Issued mostly to recon units."
 	icon_state = "4"
-	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+	flags_atom = NO_NAME_OVERRIDE
 
 /obj/item/clothing/suit/marine/rto/forecon/Initialize(mapload)
 	. = ..()
@@ -942,7 +942,7 @@
 	desc = "Standard UACG issue M3 Pattern Personal Armor. Composite ballistic armor, integral biomonitoring system, and brackets for the IMP system as well as the TNR Shoulder Lamp."
 	icon_state = "uacg"
 	item_state = "uacg"
-	flags_atom = NO_SNOW_TYPE
+
 	name = "\improper M3 pattern armor"
 	specialty = "M3 pattern"
 
