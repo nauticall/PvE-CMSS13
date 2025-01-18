@@ -394,3 +394,8 @@
 	icon = 'icons/obj/structures/props/hybrisarandomprops.dmi'
 	icon_state = "coffeecuppajoe"
 	center_of_mass = "x=15;y=10"
+    
+/obj/item/reagent_container/food/drinks/plasticcup
+	name = "plastic cup"
+	icon_state = "plasticcup"
+	desc = "A decent sized plastic cup, perfect aboard starships for it's capacity to deal with careless handling by roughnecks."
