@@ -920,6 +920,11 @@ Defined in conflicts.dm of the #defines folder.
 			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
 		if("classic")
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+			. = TRUE
+		if("urban")
+			attach_icon = new_attach_icon ? new_attach_icon : "u_" + attach_icon
+			. = TRUE
+	return .
 
 /obj/item/attachable/scope
 	name = "S8 4x telescopic scope"
@@ -2239,6 +2244,11 @@ Defined in conflicts.dm of the #defines folder.
 			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
 		if("classic")
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+			. = TRUE
+		if("urban")
+			attach_icon = new_attach_icon ? new_attach_icon : "u_" + attach_icon
+			. = TRUE
+	return .
 
 /obj/item/attachable/stock/vp70
 	name = "\improper VP70 burst stock"
@@ -2354,7 +2364,12 @@ Defined in conflicts.dm of the #defines folder.
 		if("desert")
 			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
 		if("classic")
-			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon */
+			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+			. = TRUE
+		if("urban")
+			attach_icon = new_attach_icon ? new_attach_icon : "u_" + attach_icon
+			. = TRUE
+	return .
 
 /obj/item/attachable/m4ra_barrel_custom
 	name = "custom M4RA barrel"
@@ -2381,6 +2396,11 @@ Defined in conflicts.dm of the #defines folder.
 			attach_icon = new_attach_icon ? new_attach_icon : "d_" + attach_icon
 		if("classic")
 			attach_icon = new_attach_icon ? new_attach_icon : "c_" + attach_icon
+			. = TRUE
+		if("urban")
+			attach_icon = new_attach_icon ? new_attach_icon : "u_" + attach_icon
+			. = TRUE
+	return .
 
 /obj/item/attachable/m4ra_barrel/pve
 	name = "M4RA-R2 muzzle break"

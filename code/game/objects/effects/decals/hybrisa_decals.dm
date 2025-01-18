@@ -151,6 +151,16 @@
 	icon = 'icons/effects/64x64hybrisa_decals.dmi'
 	icon_state = "workers_decal"
 
+// 128 x 64 Decals
+
+/obj/effect/hybrisa/decal/wy_huge_logo
+	name = "Weyland-Yutani Corp. - Building Better Worlds"
+	icon = 'icons/effects/WY_huge_logo.dmi'
+	icon_state = "wy_huge_logo"
+
+/obj/effect/hybrisa/decal/wy_huge_logo/lines
+	icon_state = "wy_huge_logo_lines"
+
 // 64x128 Decals
 /obj/effect/hybrisa/decal/meridianlogo
 	icon = 'icons/effects/meridianlogo.dmi'
@@ -187,8 +197,30 @@
 	icon = 'icons/effects/hybrisa_decals.dmi'
 	icon_state = "engPlatform_corners"
 
+/obj/effect/hybrisa/decal/hull_angled
+	icon = 'icons/effects/hybrisa_decals.dmi'
+	icon_state = "hull_angled"
+
+/obj/effect/hybrisa/decal/hull_angled2
+	icon = 'icons/effects/hybrisa_decals.dmi'
+	icon_state = "hull_angled2"
+
+/obj/effect/hybrisa/decal/plating_angled
+	icon = 'icons/effects/hybrisa_decals.dmi'
+	icon_state = "plating_angled"
+
 /obj/effect/hybrisa/decal/egg_base
 	name = "strange goop"
 	desc = null
-	icon = 'icons/obj/structures/props/hybrisarandomprops.dmi'
+	icon = 'icons/obj/structures/props/hybrisa/misc_props.dmi'
 	icon_state = "egg_base"
+
+// Colorable Rug
+
+/obj/effect/hybrisa/decal/colorable_rug
+	name = "rug"
+	icon = 'icons/obj/structures/props/hybrisa/64x64_props.dmi'
+	desc = null
+	icon_state = "colorable_rug"
+	layer = TURF_LAYER
+	density = FALSE

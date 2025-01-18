@@ -454,8 +454,10 @@ GLOBAL_LIST_EMPTY(activated_medevac_stretchers)
 
 /obj/structure/bed/roller/hospital/Initialize(mapload, ...)
 	. = ..()
-	INVOKE_ASYNC(src, PROC_REF(create_body))
-	update_icon()
+	if(SSticker.current_state >= GAME_STATE_PLAYING)
+		create_body()
+	else
+		RegisterSignal(SSdcs, COMSIG_GLOB_MODE_POSTSETUP, PROC_REF(create_body))
 
 /obj/structure/bed/roller/hospital/Destroy()
 	if(body)
@@ -496,10 +498,13 @@ GLOBAL_LIST_EMPTY(activated_medevac_stretchers)
 	..()
 
 /obj/structure/bed/roller/hospital/proc/create_body()
-	body = new()
+	SIGNAL_HANDLER
+	body = new(loc)
+	body.create_hud()
 	contents += body
 	arm_equipment(body, body_preset, TRUE, FALSE)
 	body.death(create_cause_data("exposure"))
+	update_icon()
 
 /obj/structure/bed/roller/hospital/proc/dump_body()
 	var/turf/dump_turf = get_turf(src)
@@ -540,7 +545,7 @@ GLOBAL_LIST_EMPTY(activated_medevac_stretchers)
 /obj/structure/bed/hybrisa/hospital/hospitaldivider
 	name = "hospital divider"
 	desc = "A hospital divider for privacy."
-	icon = 'icons/obj/structures/props/hybrisarandomprops.dmi'
+	icon = 'icons/obj/structures/props/curtain.dmi'
 	icon_state = "hospitalcurtain"
 	layer = ABOVE_MOB_LAYER
 	anchored = TRUE

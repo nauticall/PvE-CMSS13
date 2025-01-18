@@ -2942,7 +2942,6 @@
 		boxes += extra
 	update_icon()
 
-
 // Pizza Galaxy Pizza
 
 /obj/item/pizzabox/pizza_galaxy

@@ -403,7 +403,7 @@
 	ship_tag = DROPSHIP_TRIPOLI
 /obj/effect/attach_point/fuel
 	name = "engine system attach point"
-	icon = 'icons/obj/structures/props/almayer_props64.dmi'
+	icon = 'icons/obj/structures/props/dropship/dropship_equipment64.dmi'
 	icon_state = "fuel_base"
 	base_category = DROPSHIP_FUEL_EQP
 

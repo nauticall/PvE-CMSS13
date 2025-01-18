@@ -1,3 +1,4 @@
+
 //Trucks
 //Read the documentation in multitile.dm before trying to decipher this stuff
 
@@ -133,7 +134,7 @@
 
 	mobs_under += living
 	RegisterSignal(living, COMSIG_PARENT_QDELETING, PROC_REF(remove_under_van))
-	RegisterSignal(living, COMSIG_MOB_LOGIN, PROC_REF(add_client))
+	RegisterSignal(living, COMSIG_MOB_LOGGED_IN, PROC_REF(add_client))
 	RegisterSignal(living, COMSIG_MOVABLE_MOVED, PROC_REF(check_under_van))
 
 	if(living.client)
@@ -149,7 +150,7 @@
 
 	UnregisterSignal(living, list(
 		COMSIG_PARENT_QDELETING,
-		COMSIG_MOB_LOGIN,
+		COMSIG_MOB_LOGGED_IN,
 		COMSIG_MOVABLE_MOVED,
 	))
 
@@ -174,6 +175,8 @@
 	for(var/icon in GLOB.player_list)
 		var/mob/mob = icon
 		mob.client.images -= normal_image
+
+	QDEL_NULL(lighting_holder)
 
 	return ..()
 

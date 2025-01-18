@@ -19,11 +19,11 @@
         "/datum/equipment_preset/survivor/hybrisa/paramedic",
         "/datum/equipment_preset/survivor/hybrisa/scientist_xenobiologist",
         "/datum/equipment_preset/survivor/hybrisa/scientist_xenoarchaeologist",
-        "/datum/equipment_preset/survivor/hybrisa/cmb_officer",
+        "/datum/equipment_preset/survivor/hybrisa/nspa_constable",
         "/datum/equipment_preset/survivor/hybrisa/electrical_engineer",
         "/datum/equipment_preset/survivor/hybrisa/construction_worker",
         "/datum/equipment_preset/survivor/hybrisa/heavy_vehicle_operator",
-        "/datum/equipment_preset/survivor/hybrisa/wy_exec",
+        "/datum/equipment_preset/survivor/corporate/hybrisa",
         "/datum/equipment_preset/survivor/hybrisa/wey_po",
         "/datum/equipment_preset/survivor/hybrisa/corporate_goon",
         "/datum/equipment_preset/survivor/clf"
@@ -43,7 +43,8 @@
         580,
         0.0
     ],
-    "survivor_message": "As the city burns, you find yourself among the dwindling few who survived the initial onslaught, The catastrophic breach shattered the once-prosperous world of LV-759, home to a large industrial Weyland-Yutani colony known as Hybrisa Prospera. Through sheer will or cunning, you've evaded the relentless alien onslaught so far... but the nightmare persists.",
+    "survivor_message": "As the city burns, you find yourself among the dwindling few who survived the initial onslaught, The catastrophic breach shattered the once-prosperous world of LV-759, home to the large commercial & industrial Weyland-Yutani colony known as Hybrisa Prospera. Through sheer will or cunning, you've evaded the relentless alien onslaught so far... but the nightmare persists.",
+    "announce_text": "An automated distress signal has been received from the Weyland-Yutani colony, Hybrisa Prospera — a vast, city-like settlement renowned for its immense wealth, extensive mining operations, and thriving commerce. Recently fully acquired from the TWE, this former colony is now a key asset for Weyland-Yutani, with a sprawling urban center housing thousands of residents and numerous smaller outer colonies under its control. The ###SHIPNAME### has been dispatched to investigate the situation.",
     "map_item_type": "/obj/item/map/lv759_map",
 	"monkey_types": [
         "monkey"

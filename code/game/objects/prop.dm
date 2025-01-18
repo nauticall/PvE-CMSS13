@@ -195,7 +195,7 @@
 /obj/item/prop/almayer
 	name = "GENERIC USS ALMAYER PROP"
 	desc = "THIS SHOULDN'T BE VISIBLE, IF YOU SEE THIS THERE IS A PROBLEM IN THE PROP.DM FILE MAKE A BUG REPORT "
-	icon = 'icons/obj/structures/props/almayer_props.dmi'
+	icon = 'icons/obj/structures/props/almayer/almayer_props.dmi'
 	icon_state = "hangarbox"
 
 /obj/item/prop/almayer/box
@@ -349,31 +349,24 @@
 	name = "Boots!: Issue No.55"
 	desc = "The only official USCM magazine, the headline reads 'TEN tips to keep your UD4 cockpit both safer and more relaxing.'"
 
-/obj/item/prop/scrap
-	name = "scrap metal"
-	icon = 'icons/obj/items/fishing_atoms.dmi'
-	icon_state = "sheet-scrap"
-	item_state = ""
-	desc = "A rusty piece of scrap metal."
-	w_class = SIZE_MEDIUM
+// Massive Digger by dimdimich1996
 
-/obj/item/prop/rock
-	name = "rock"
-	icon = 'icons/obj/items/plush.dmi'
-	icon_state = "rock"
-	item_state = ""
-	force = 30
-	throwforce = 25
-	desc = "The most ancient of tools."
-	w_class = SIZE_TINY
-	hitsound = 'sound/weapons/genhit3.ogg'
+/obj/structure/prop/invuln/dense/excavator
+	name = "Model 30 Light Excavator"
+	desc = "Weyland-Yutani Corporation's Model 30 Light Excavator. Despite looking like a massive beast, the Model 30 is fairly light when compared to other W-Y terraforming excavators. It's designed to be able to be disassembled for transport and re-assembled on site. This one is a nice orange color."
+	icon = 'icons/obj/structures/props/digger.dmi'
+	icon_state = "digger_orange"
+	layer = BIG_XENO_LAYER
 
-/obj/item/prop/deviltrap
-	name = "devil trap"
-	icon = 'icons/obj/items/misc.dmi'
-	icon_state = "deviltrap"
-	item_state = ""
-	force = 0.5
-	throwforce = 0.5
-	desc = "An object crafted out of branches, twigs, and twine rope that seem to form a miniature pyramid. It leaves you with an ominous feeling."
-	w_class = SIZE_LARGE
+/obj/structure/prop/invuln/dense/excavator/gray
+	desc = "Weyland-Yutani Corporation's Model 30 Light Excavator. Despite looking like a massive beast, the Model 30 is fairly light when compared to other W-Y terraforming excavators. It's designed to be able to be disassembled for transport and re-assembled on site. This one is a nice gray color."
+	icon_state = "digger_gray"
+
+/obj/structure/prop/invuln/dense/excavator/Initialize()
+	. = ..()
+	if(dir & (SOUTH|NORTH))
+		bound_height = 192
+		bound_width = 96
+	else
+		bound_height = 96
+		bound_width = 192

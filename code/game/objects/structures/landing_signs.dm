@@ -81,9 +81,3 @@
 	name = "Hybrisa Prospera - Weyland-Yutani Kelland Mining - Landing Zone two sign"
 	desc = "A large sign that reads 'WY - KMCC Mining - HBP - LZ - 01' The Kelland Mining logo is adorns the sign."
 	icon_state = "hybrisamining_sign"
-
-/obj/structure/lz_sign/Ravdonika
-	name = "Ravdonika Archaeo Sign"
-	desc = "A large sign reading 'Ravdonika Archaeo' in Romanized characters."
-	icon = 'icons/obj/structures/props/landing_signs.dmi'
-	icon_state = "ravdonika_sign"

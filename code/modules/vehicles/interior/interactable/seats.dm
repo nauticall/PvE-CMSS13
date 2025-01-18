@@ -533,3 +533,10 @@
 
 /obj/structure/bed/chair/vehicle/dropship_cockpit/copilot
 	name = "co-pilot seat"
+
+// White chairs
+
+/obj/structure/bed/chair/vehicle/white
+	name = "passenger seat"
+	desc = "A sturdy chair with a brace that lowers over your body. Prevents being flung around in vehicle during crash being injured as a result. Fasten your seatbelts, kids! Fix with welding tool in case of damage."
+	icon = 'icons/obj/vehicles/interiors/whitechair.dmi'

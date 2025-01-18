@@ -207,6 +207,14 @@
 	projectile_coverage = PROJECTILE_COVERAGE_LOW
 	layer = MOB_LAYER + 0.01
 
+/obj/structure/barricade/handrail/pizza
+	name = "\improper diner half-wall"
+	icon_state = "hr_sandstone" //temp, getting sprites soontm
+	color = "#b51c0b"
+	can_be_reinforced = FALSE
+	projectile_coverage = PROJECTILE_COVERAGE_LOW
+	layer = MOB_LAYER + 0.01
+
 // Hybrisa Barricades
 
 /obj/structure/barricade/handrail/hybrisa
@@ -238,17 +246,21 @@
 	name = "wood road barrier"
 	icon_state = "roadbarrierwood"
 	barricade_hitsound = 'sound/effects/woodhit.ogg'
+
 /obj/structure/barricade/handrail/hybrisa/road/wood/orange
 	name = "wood road barrier"
 	icon_state = "roadbarrierwood"
+
 /obj/structure/barricade/handrail/hybrisa/road/wood/blue
 	name = "wood road barrier"
 	icon_state = "roadbarrierpolice"
 
-// Metal
+// Metal Road Barrier
+
 /obj/structure/barricade/handrail/hybrisa/road/metal
 	name = "metal road barrier"
 	icon_state = "centerroadbarrier"
+
 /obj/structure/barricade/handrail/hybrisa/road/metal/metaltan
 	name = "metal road barrier"
 	icon_state = "centerroadbarrier"
@@ -278,5 +290,5 @@
 	icon_state = "centerroadbarrierdouble"
 
 /obj/structure/barricade/handrail/hybrisa/handrail
-	name = "haindrail"
+	name = "handrail"
 	icon_state = "handrail_hybrisa"

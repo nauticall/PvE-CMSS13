@@ -105,14 +105,16 @@ GLOBAL_LIST_EMPTY(machines)
 	var/mob/living/carbon/human/operator = null //Had no idea where to put this so I put this here. Used for operating machines with RELAY_CLICK
 		//EQUIP,ENVIRON or LIGHT
 	var/list/component_parts //list of all the parts used to build it, if made from certain kinds of frames.
-	var/manual = 0
 	layer = OBJ_LAYER
 	var/machine_processing = 0 // whether the machine is busy and requires process() calls in scheduler. // Please replace this by DF_ISPROCESSING in another refactor --fira
-	throwpass = 1
+	throwpass = TRUE
 	projectile_coverage = PROJECTILE_COVERAGE_MEDIUM
 	/// Reverse lookup for a breaker_switch that if specified is controlling us
 	var/obj/structure/machinery/colony_floodlight_switch/breaker_switch
 	var/power_machine = FALSE //Whether the machine should process on power, or normal processor
+	/// Reverse lookup for a breaker_switch that if specified is controlling us
+	var/obj/structure/machinery/colony_floodlight_switch/breaker_switch
+	/// Whether this is toggled on
 	var/is_on = TRUE
 
 /obj/structure/machinery/vv_get_dropdown()

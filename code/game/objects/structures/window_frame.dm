@@ -323,7 +323,6 @@
 	window_type = /obj/structure/window/framed/corsat/security
 
 
-
 // Hybrisa Window Frames
 
 // Research

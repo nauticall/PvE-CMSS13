@@ -57,3 +57,11 @@
 /datum/map_template/interior/pizza_van
 	name = "Pizza-Galaxy Van"
 	interior_id = "pizza_van"
+
+/datum/map_template/interior/arc
+	name = "ARC"
+	interior_id = "arc"
+
+/datum/map_template/interior/pizza_van
+	name = "Pizza-Galaxy Van"
+	interior_id = "pizza_van"

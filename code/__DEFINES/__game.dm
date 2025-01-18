@@ -34,6 +34,7 @@
 #define MAP_ICE_COLONY_V2 "Ice Colony v2"
 #define MAP_ICE_COLONY_V3 "Shivas Snowball" //Ice Rework, low pop enabled.
 #define MAP_RUNTIME "USS Runtime"
+#define MAP_LV759_HYBRISA_PROSPERA "LV-759 Hybrisa Prospera" // Highpop Only
 #define MAP_LV522_CHANCES_CLAIM "LV-522 Chance's Claim" // Highpop Only
 #define MAP_LV522_CHANCES_CLAIM_FORECON "LV-522 Chance's Claim Forecon"
 #define MAP_NEW_VARADERO "New Varadero"//ice colony underground but as its own map

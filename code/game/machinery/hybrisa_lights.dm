@@ -1,8 +1,7 @@
 // Hybrisa Electrical Stuff
 /obj/structure/machinery/colony_floodlight_switch/electrified_fence_switch
 	name = "colony electrified fence switch"
-	icon = 'icons/obj/structures/props/hybrisarandomprops.dmi'
-	icon_state = "panelnopower"
+	icon_state = "panelbnopower"
 	desc = "This switch controls the electrified fences. It only functions when there is power."
 	machinery_type_whitelist = null
 	/// The power each fence takes up per process
@@ -27,11 +26,11 @@
 
 /obj/structure/machinery/colony_floodlight_switch/electrified_fence_switch/update_icon()
 	if(!ispowered)
-		icon_state = "panelnopower"
+		icon_state = "panelbnopower"
 	else if(is_on)
-		icon_state = "panelon"
+		icon_state = "panelbon"
 	else
-		icon_state = "paneloff"
+		icon_state = "panelboff"
 
 /obj/structure/machinery/colony_floodlight_switch/electrified_fence_switch/proc/toggle_fences()
 	for(var/obj/structure/fence/electrified/fence as anything in GLOB.all_electric_fences)
@@ -46,9 +45,13 @@
 // Hybrisa Streetlights
 /obj/structure/machinery/colony_floodlight/street
 	name = "colony streetlight"
-	icon = 'icons/obj/structures/props/64x64_hybrisarandomprops.dmi'
+	icon = 'icons/obj/structures/props/streetlights.dmi'
 	icon_state = "street_off"
 	layer = BILLBOARD_LAYER
+
+/obj/structure/machinery/colony_floodlight/street/Initialize(mapload, ...)
+	. = ..()
+	AddComponent(/datum/component/shimmy_around, east_offset = -15, west_offset = -15)
 
 /obj/structure/machinery/colony_floodlight/street/update_icon()
 	if(damaged)
@@ -63,13 +66,17 @@
 	lum_value = 0
 	name = "traffic light"
 	desc = "A traffic light"
-	icon = 'icons/obj/structures/props/64x64_hybrisarandomprops.dmi'
+	icon = 'icons/obj/structures/props/streetlights.dmi'
 	icon_state = "trafficlight"
 	bound_width = 32
 	bound_height = 32
 	density = TRUE
 	health = 200
 	layer = BILLBOARD_LAYER
+
+/obj/structure/machinery/colony_floodlight/traffic/Initialize(mapload, ...)
+	. = ..()
+	AddComponent(/datum/component/shimmy_around, east_offset = -15, west_offset = -15)
 
 /obj/structure/machinery/colony_floodlight/traffic/update_icon()
 	if(damaged)
@@ -79,19 +86,10 @@
 	else
 		icon_state = "trafficlight"
 
-/obj/structure/machinery/colony_floodlight/traffic_alt
-	lum_value = 0
-	name = "traffic light"
-	desc = "A traffic light"
-	icon = 'icons/obj/structures/props/64x64_hybrisarandomprops.dmi'
+/obj/structure/machinery/colony_floodlight/traffic/alt
 	icon_state = "trafficlight_alt"
-	bound_width = 32
-	bound_height = 32
-	density = TRUE
-	health = 200
-	layer = BILLBOARD_LAYER
 
-/obj/structure/machinery/colony_floodlight/traffic_alt/update_icon()
+/obj/structure/machinery/colony_floodlight/traffic/alt/update_icon()
 	if(damaged)
 		icon_state = "trafficlight_alt_damaged"
 	else if(is_on)
@@ -102,7 +100,7 @@
 // Engineer Floor lights
 /obj/structure/machinery/colony_floodlight_switch/engineerconsole_switch
 	name = "giant alien console"
-	icon = 'icons/obj/structures/props/64x64_hybrisarandomprops.dmi'
+	icon = 'icons/obj/structures/props/engineers/consoles.dmi'
 	icon_state = "engineerconsole"
 	desc = "A giant alien console of some kind, unlike anything you've ever seen before. Who knows the purpose of this strange technology..."
 	use_power = USE_POWER_NONE
@@ -124,7 +122,7 @@
 	name = "circular light"
 	icon_state = "engineerlight_off"
 	desc = "A huge circular light"
-	icon = 'icons/obj/structures/props/hybrisarandomprops.dmi'
+	icon = 'icons/obj/structures/props/engineers/light.dmi'
 	density = FALSE
 	unslashable = TRUE
 	unacidable = TRUE

@@ -114,8 +114,8 @@
 	var/active = 0
 
 /obj/item/weapon/shield/riot/metal
-	name = "assault shield"
-	desc = "Composite ballistic shield, painted a dark gray. If used correctly it can repel attacks from almost anything."
+	name = "metal riot shield"
+	desc = "A metal riot shield effective, but heavy."
 	icon_state = "riotmetal"
 	item_state = "riotmetal"
 	base_icon_state = "riotmetal"
