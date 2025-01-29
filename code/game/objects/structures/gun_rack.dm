@@ -56,6 +56,31 @@
 /obj/structure/gun_rack/m41/empty
 	initial_stored = 0
 
+/obj/structure/gun_rack/m39
+	icon_state = "m39"
+	desc = "ARMAT-produced gun rack for storage of long guns. This rack was specially shaped to store M39 submachine guns, and nothing else."
+	max_stored = 6
+	initial_stored = 6
+	allowed_type = /obj/item/weapon/gun/smg/m39/pve
+	populate_type = /obj/item/weapon/gun/smg/m39/pve
+
+/obj/structure/gun_rack/m39/unloaded
+	populate_type = /obj/item/weapon/gun/smg/m39/pve/unloaded
+
+/obj/structure/gun_rack/m39/empty
+	initial_stored = 0
+
+/obj/structure/gun_rack/m39/small
+	icon_state = "m39s"
+	max_stored = 2
+	initial_stored = 2
+
+/obj/structure/gun_rack/m39/small/unloaded
+	populate_type = /obj/item/weapon/gun/smg/m39/pve/unloaded
+
+/obj/structure/gun_rack/m39/small/empty
+	initial_stored = 0
+
 /obj/structure/gun_rack/type71
 	icon_state = "type71"
 	desc = "Some off-branded gun rack. Per SOF and UPPA regulations, weapons should be stored in secure safes and only given out when necessary. Of course, most (but not all!) units overlook this regulation, only storing their firearms in safes when inspection arrives."
