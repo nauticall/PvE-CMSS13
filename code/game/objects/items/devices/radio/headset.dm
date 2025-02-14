@@ -416,13 +416,22 @@
 /obj/item/device/radio/headset/almayer/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
 
-	if((user == user.assigned_squad?.fireteam_leaders["SQ1"] || user == user.assigned_squad?.fireteam_leaders["SQ2"]) && ("Section Sergeant" in tracking_options))
-		locate_setting = tracking_options["Section Sergeant"]
+	var/list/fireteam_leaders = user.assigned_squad?.fireteam_leaders
+	if(!fireteam_leaders)
 		return
+	// Check if user is a fireteam leader
+	var/is_fireteam_leader = FALSE
+	if(user in list(
+		fireteam_leaders["SQ1"],
+		fireteam_leaders["SQ2"],
+		fireteam_leaders["SQ3"],
+		fireteam_leaders["SQ4"]
+	))
+		is_fireteam_leader = TRUE
 
-	if(((user in user.assigned_squad?.fireteams["SQ1"]) || (user in user.assigned_squad?.fireteams["SQ2"])) && ("Squad Sergeant" in tracking_options))
-		locate_setting = tracking_options["Squad Sergeant"]
-		return
+	if(is_fireteam_leader)
+		// Assign priority setting
+		locate_setting = tracking_options["Section Sergeant"] || tracking_options["Squad Sergeant"]
 
 /obj/item/device/radio/headset/almayer/verb/enter_tree()
 	set name = "Enter Techtree"

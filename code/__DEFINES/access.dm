@@ -47,6 +47,9 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 
 #define ACCESS_SQUAD_ONE 39
 #define ACCESS_SQUAD_TWO 40
+#define ACCESS_SQUAD_THREE 41
+#define ACCESS_SQUAD_FOUR 42
+
 
 // AI Core Accesses
 /// Used in temporary passes

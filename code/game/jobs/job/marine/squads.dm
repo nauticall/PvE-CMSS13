@@ -77,13 +77,17 @@
 	//vvv Do not set these in squad defines
 	var/mob/living/carbon/human/squad_leader = null //Who currently leads it.
 	var/list/fireteam_leaders = list(
-									"SQ1" = null,
-									"SQ2" = null,
-									) //FT leaders stored here
+		"SQ1" = list(),
+		"SQ2" = list(),
+		"SQ3" = list(),
+		"SQ4" = list(),
+	) //FT leaders stored here
 	var/list/list/fireteams = list(
-							"SQ1" = list(),
-							"SQ2" = list(),
-							)
+		"SQ1" = list(),
+		"SQ2" = list(),
+		"SQ3" = list(),
+		"SQ4" = list(),
+	)
 	var/list/squad_info_data = list()
 
 	var/num_riflemen = 0
@@ -114,6 +118,8 @@
 
 	var/squad_one_access = ACCESS_SQUAD_ONE
 	var/squad_two_access = ACCESS_SQUAD_TWO
+	var/squad_three_access = ACCESS_SQUAD_THREE
+	var/squad_four_access = ACCESS_SQUAD_FOUR
 
 /datum/squad/marine
 	name = "Root"
@@ -344,6 +350,8 @@
 	tracking_id = SStracking.setup_trackers()
 	SStracking.setup_trackers(null, "SQ1")
 	SStracking.setup_trackers(null, "SQ2")
+	SStracking.setup_trackers(null, "SQ3")
+	SStracking.setup_trackers(null, "SQ4")
 	update_all_squad_info()
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_MODE_POSTSETUP, PROC_REF(setup_supply_drop_list))
@@ -795,11 +803,16 @@
 
 	// I'm not fixing how cursed these strings are, god save us all if someone (or me (https://i.imgur.com/nSy81Bn.png)) has to change these again
 	var/obj/item/card/id/id = H.get_idcard()
-	if(id)
-		if(fireteam == "SQ1")
-			id.access += squad_one_access
-		if(fireteam == "SQ2")
-			id.access += squad_two_access
+	if (id)
+		var/list/fireteam_access = list(
+			"SQ1" = squad_one_access,
+			"SQ2" = squad_two_access,
+			"SQ3" = squad_three_access,
+			"SQ4" = squad_four_access,
+		)
+
+		if (fireteam in fireteam_access)
+			id.access += fireteam_access[fireteam]
 
 	for(var/obj/item/device/radio/headset/cycled_headset in H)
 		if(!("Squad Sergeant" in cycled_headset.tracking_options))
