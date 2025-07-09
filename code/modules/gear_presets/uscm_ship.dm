@@ -607,14 +607,14 @@
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/xo
-	name = "USCM Executive Officer (XO)"
+	name = "USCM Company Commander (CoyCo)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 
 	idtype = /obj/item/card/id/dogtag
 	assignment = JOB_XO
 	rank = JOB_XO
 	paygrades = list(PAY_SHORT_MO3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "XO"
+	role_comm_title = "CoyCo"
 	minimum_age = 35
 	skills = /datum/skills/XO
 

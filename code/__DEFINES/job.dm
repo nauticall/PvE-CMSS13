@@ -89,7 +89,7 @@ GLOBAL_LIST_INIT(job_squad_roles, JOB_SQUAD_ROLES_LIST)
 #define JOB_WORKING_JOE "Working Joe"
 
 #define JOB_CO "Commanding Officer"
-#define JOB_XO "Executive Officer"
+#define JOB_XO "Company Commander"
 #define JOB_SO "Platoon Commander"
 #define JOB_COMMAND_ROLES /datum/timelock/command
 #define JOB_COMMAND_ROLES_LIST   list(JOB_CO, JOB_XO, JOB_SO)
